@@ -1,0 +1,128 @@
+.global _start
+
+.section .text
+    mov $mergedArray, %rax
+    cmpl $4029151837, 0(%rax)
+    jne bad_exit
+
+    cmpl $4005388905, 4(%rax)
+    jne bad_exit
+
+    cmpl $3868179616, 8(%rax)
+    jne bad_exit
+
+    cmpl $3780305410, 12(%rax)
+    jne bad_exit
+
+    cmpl $3720663167, 16(%rax)
+    jne bad_exit
+
+    cmpl $3716883388, 20(%rax)
+    jne bad_exit
+
+    cmpl $3569288954, 24(%rax)
+    jne bad_exit
+
+    cmpl $3483950901, 28(%rax)
+    jne bad_exit
+
+    cmpl $3462460673, 32(%rax)
+    jne bad_exit
+
+    cmpl $3353546475, 36(%rax)
+    jne bad_exit
+
+    cmpl $3270079713, 40(%rax)
+    jne bad_exit
+
+    cmpl $3004566421, 44(%rax)
+    jne bad_exit
+
+    cmpl $2948568222, 48(%rax)
+    jne bad_exit
+
+    cmpl $2782856596, 52(%rax)
+    jne bad_exit
+
+    cmpl $2669540437, 56(%rax)
+    jne bad_exit
+
+    cmpl $2658757537, 60(%rax)
+    jne bad_exit
+
+    cmpl $2638833756, 64(%rax)
+    jne bad_exit
+
+    cmpl $2630993636, 68(%rax)
+    jne bad_exit
+
+    cmpl $2576981956, 72(%rax)
+    jne bad_exit
+
+    cmpl $2529266232, 76(%rax)
+    jne bad_exit
+
+    cmpl $2419556581, 80(%rax)
+    jne bad_exit
+
+    cmpl $1941340067, 84(%rax)
+    jne bad_exit
+
+    cmpl $1851571557, 88(%rax)
+    jne bad_exit
+
+    cmpl $1833853803, 92(%rax)
+    jne bad_exit
+
+    cmpl $1702730002, 96(%rax)
+    jne bad_exit
+
+    cmpl $1689874833, 100(%rax)
+    jne bad_exit
+
+    cmpl $1670239252, 104(%rax)
+    jne bad_exit
+
+    cmpl $1670142353, 108(%rax)
+    jne bad_exit
+
+    cmpl $1471577150, 112(%rax)
+    jne bad_exit
+
+    cmpl $1463518529, 116(%rax)
+    jne bad_exit
+
+    cmpl $1280150350, 120(%rax)
+    jne bad_exit
+
+    cmpl $1086206876, 124(%rax)
+    jne bad_exit
+
+    cmpl $983669809, 128(%rax)
+    jne bad_exit
+
+    cmpl $482686149, 132(%rax)
+    jne bad_exit
+
+    cmpl $432955043, 136(%rax)
+    jne bad_exit
+
+    cmpl $412209905, 140(%rax)
+    jne bad_exit
+
+    cmpl $0, 144(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+array1: .int 4029151837,3868179616,3716883388,3270079713,3004566421,2948568222,2782856596,2669540437,2638833756,2630993636,2576981956,2529266232,2419556581,1941340067,1702730002,1689874833,1471577150,1463518529,1280150350,983669809,412209905,0
+array2: .int 4005388905,3780305410,3720663167,3569288954,3483950901,3462460673,3353546475,2658757537,1851571557,1833853803,1670239252,1670142353,1086206876,482686149,432955043,0
+mergedArray: .zero 148

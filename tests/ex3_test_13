@@ -1,0 +1,119 @@
+.global _start
+
+.section .text
+    mov $mergedArray, %rax
+    cmpl $4003273708, 0(%rax)
+    jne bad_exit
+
+    cmpl $3883041409, 4(%rax)
+    jne bad_exit
+
+    cmpl $3621371563, 8(%rax)
+    jne bad_exit
+
+    cmpl $3566607577, 12(%rax)
+    jne bad_exit
+
+    cmpl $3193491730, 16(%rax)
+    jne bad_exit
+
+    cmpl $3141957820, 20(%rax)
+    jne bad_exit
+
+    cmpl $3117686115, 24(%rax)
+    jne bad_exit
+
+    cmpl $3037842329, 28(%rax)
+    jne bad_exit
+
+    cmpl $2958300124, 32(%rax)
+    jne bad_exit
+
+    cmpl $2854213818, 36(%rax)
+    jne bad_exit
+
+    cmpl $2741046681, 40(%rax)
+    jne bad_exit
+
+    cmpl $2652205483, 44(%rax)
+    jne bad_exit
+
+    cmpl $2642170355, 48(%rax)
+    jne bad_exit
+
+    cmpl $2637136188, 52(%rax)
+    jne bad_exit
+
+    cmpl $2621718862, 56(%rax)
+    jne bad_exit
+
+    cmpl $2538062495, 60(%rax)
+    jne bad_exit
+
+    cmpl $2489443781, 64(%rax)
+    jne bad_exit
+
+    cmpl $2110418189, 68(%rax)
+    jne bad_exit
+
+    cmpl $2007403818, 72(%rax)
+    jne bad_exit
+
+    cmpl $1967278658, 76(%rax)
+    jne bad_exit
+
+    cmpl $1941436735, 80(%rax)
+    jne bad_exit
+
+    cmpl $1747919944, 84(%rax)
+    jne bad_exit
+
+    cmpl $1744285975, 88(%rax)
+    jne bad_exit
+
+    cmpl $1709265331, 92(%rax)
+    jne bad_exit
+
+    cmpl $1531692988, 96(%rax)
+    jne bad_exit
+
+    cmpl $1487653795, 100(%rax)
+    jne bad_exit
+
+    cmpl $1194947347, 104(%rax)
+    jne bad_exit
+
+    cmpl $1073483709, 108(%rax)
+    jne bad_exit
+
+    cmpl $762748763, 112(%rax)
+    jne bad_exit
+
+    cmpl $747485065, 116(%rax)
+    jne bad_exit
+
+    cmpl $645928117, 120(%rax)
+    jne bad_exit
+
+    cmpl $116198916, 124(%rax)
+    jne bad_exit
+
+    cmpl $15066672, 128(%rax)
+    jne bad_exit
+
+    cmpl $0, 132(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+array1: .int 3883041409,3621371563,3193491730,2958300124,2652205483,2637136188,2621718862,2007403818,1967278658,1941436735,1747919944,1744285975,1487653795,1194947347,1073483709,762748763,747485065,645928117,0
+array2: .int 4003273708,3566607577,3141957820,3117686115,3037842329,2854213818,2741046681,2642170355,2538062495,2489443781,2110418189,1709265331,1531692988,116198916,15066672,0
+mergedArray: .zero 136

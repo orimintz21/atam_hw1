@@ -1,0 +1,317 @@
+.global _start
+
+.section .text
+    mov $mergedArray, %rax
+    cmpl $4200929686, 0(%rax)
+    jne bad_exit
+
+    cmpl $4190856685, 4(%rax)
+    jne bad_exit
+
+    cmpl $4183475366, 8(%rax)
+    jne bad_exit
+
+    cmpl $4113431130, 12(%rax)
+    jne bad_exit
+
+    cmpl $4089297147, 16(%rax)
+    jne bad_exit
+
+    cmpl $3981915292, 20(%rax)
+    jne bad_exit
+
+    cmpl $3933103091, 24(%rax)
+    jne bad_exit
+
+    cmpl $3922483282, 28(%rax)
+    jne bad_exit
+
+    cmpl $3921218937, 32(%rax)
+    jne bad_exit
+
+    cmpl $3912760660, 36(%rax)
+    jne bad_exit
+
+    cmpl $3904053578, 40(%rax)
+    jne bad_exit
+
+    cmpl $3901522990, 44(%rax)
+    jne bad_exit
+
+    cmpl $3871393481, 48(%rax)
+    jne bad_exit
+
+    cmpl $3857611043, 52(%rax)
+    jne bad_exit
+
+    cmpl $3781866343, 56(%rax)
+    jne bad_exit
+
+    cmpl $3773578616, 60(%rax)
+    jne bad_exit
+
+    cmpl $3727286693, 64(%rax)
+    jne bad_exit
+
+    cmpl $3628429965, 68(%rax)
+    jne bad_exit
+
+    cmpl $3583157515, 72(%rax)
+    jne bad_exit
+
+    cmpl $3570423926, 76(%rax)
+    jne bad_exit
+
+    cmpl $3561117695, 80(%rax)
+    jne bad_exit
+
+    cmpl $3439336513, 84(%rax)
+    jne bad_exit
+
+    cmpl $3421021429, 88(%rax)
+    jne bad_exit
+
+    cmpl $3418089507, 92(%rax)
+    jne bad_exit
+
+    cmpl $3319804122, 96(%rax)
+    jne bad_exit
+
+    cmpl $3302193734, 100(%rax)
+    jne bad_exit
+
+    cmpl $3132487253, 104(%rax)
+    jne bad_exit
+
+    cmpl $3107400720, 108(%rax)
+    jne bad_exit
+
+    cmpl $3065259486, 112(%rax)
+    jne bad_exit
+
+    cmpl $3049122881, 116(%rax)
+    jne bad_exit
+
+    cmpl $3029142459, 120(%rax)
+    jne bad_exit
+
+    cmpl $2925711154, 124(%rax)
+    jne bad_exit
+
+    cmpl $2903702377, 128(%rax)
+    jne bad_exit
+
+    cmpl $2763529683, 132(%rax)
+    jne bad_exit
+
+    cmpl $2750235184, 136(%rax)
+    jne bad_exit
+
+    cmpl $2735338863, 140(%rax)
+    jne bad_exit
+
+    cmpl $2730920523, 144(%rax)
+    jne bad_exit
+
+    cmpl $2713222782, 148(%rax)
+    jne bad_exit
+
+    cmpl $2660417440, 152(%rax)
+    jne bad_exit
+
+    cmpl $2613829631, 156(%rax)
+    jne bad_exit
+
+    cmpl $2551333624, 160(%rax)
+    jne bad_exit
+
+    cmpl $2522252627, 164(%rax)
+    jne bad_exit
+
+    cmpl $2486020141, 168(%rax)
+    jne bad_exit
+
+    cmpl $2365912113, 172(%rax)
+    jne bad_exit
+
+    cmpl $2349683277, 176(%rax)
+    jne bad_exit
+
+    cmpl $2337949289, 180(%rax)
+    jne bad_exit
+
+    cmpl $2337506386, 184(%rax)
+    jne bad_exit
+
+    cmpl $2314705361, 188(%rax)
+    jne bad_exit
+
+    cmpl $2299699731, 192(%rax)
+    jne bad_exit
+
+    cmpl $2122650291, 196(%rax)
+    jne bad_exit
+
+    cmpl $2084619859, 200(%rax)
+    jne bad_exit
+
+    cmpl $2067152604, 204(%rax)
+    jne bad_exit
+
+    cmpl $1873613261, 208(%rax)
+    jne bad_exit
+
+    cmpl $1838754468, 212(%rax)
+    jne bad_exit
+
+    cmpl $1723904729, 216(%rax)
+    jne bad_exit
+
+    cmpl $1712408862, 220(%rax)
+    jne bad_exit
+
+    cmpl $1695778934, 224(%rax)
+    jne bad_exit
+
+    cmpl $1690958753, 228(%rax)
+    jne bad_exit
+
+    cmpl $1677958272, 232(%rax)
+    jne bad_exit
+
+    cmpl $1607181932, 236(%rax)
+    jne bad_exit
+
+    cmpl $1603221360, 240(%rax)
+    jne bad_exit
+
+    cmpl $1594742079, 244(%rax)
+    jne bad_exit
+
+    cmpl $1546679047, 248(%rax)
+    jne bad_exit
+
+    cmpl $1539704129, 252(%rax)
+    jne bad_exit
+
+    cmpl $1446824402, 256(%rax)
+    jne bad_exit
+
+    cmpl $1423159027, 260(%rax)
+    jne bad_exit
+
+    cmpl $1413554476, 264(%rax)
+    jne bad_exit
+
+    cmpl $1375176493, 268(%rax)
+    jne bad_exit
+
+    cmpl $1300376967, 272(%rax)
+    jne bad_exit
+
+    cmpl $1223323770, 276(%rax)
+    jne bad_exit
+
+    cmpl $1079534602, 280(%rax)
+    jne bad_exit
+
+    cmpl $1069759282, 284(%rax)
+    jne bad_exit
+
+    cmpl $969097043, 288(%rax)
+    jne bad_exit
+
+    cmpl $909452417, 292(%rax)
+    jne bad_exit
+
+    cmpl $906730926, 296(%rax)
+    jne bad_exit
+
+    cmpl $845013574, 300(%rax)
+    jne bad_exit
+
+    cmpl $838746372, 304(%rax)
+    jne bad_exit
+
+    cmpl $834326256, 308(%rax)
+    jne bad_exit
+
+    cmpl $826096592, 312(%rax)
+    jne bad_exit
+
+    cmpl $793403366, 316(%rax)
+    jne bad_exit
+
+    cmpl $774173994, 320(%rax)
+    jne bad_exit
+
+    cmpl $723657140, 324(%rax)
+    jne bad_exit
+
+    cmpl $660236645, 328(%rax)
+    jne bad_exit
+
+    cmpl $631879649, 332(%rax)
+    jne bad_exit
+
+    cmpl $594453595, 336(%rax)
+    jne bad_exit
+
+    cmpl $563844566, 340(%rax)
+    jne bad_exit
+
+    cmpl $465258246, 344(%rax)
+    jne bad_exit
+
+    cmpl $465082997, 348(%rax)
+    jne bad_exit
+
+    cmpl $439738653, 352(%rax)
+    jne bad_exit
+
+    cmpl $435954149, 356(%rax)
+    jne bad_exit
+
+    cmpl $415746457, 360(%rax)
+    jne bad_exit
+
+    cmpl $410778967, 364(%rax)
+    jne bad_exit
+
+    cmpl $263381541, 368(%rax)
+    jne bad_exit
+
+    cmpl $251621344, 372(%rax)
+    jne bad_exit
+
+    cmpl $200722599, 376(%rax)
+    jne bad_exit
+
+    cmpl $162210758, 380(%rax)
+    jne bad_exit
+
+    cmpl $127329332, 384(%rax)
+    jne bad_exit
+
+    cmpl $112861665, 388(%rax)
+    jne bad_exit
+
+    cmpl $90701754, 392(%rax)
+    jne bad_exit
+
+    cmpl $0, 396(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+array1: .int 4200929686,4183475366,4113431130,4089297147,3981915292,3933103091,3922483282,3921218937,3871393481,3781866343,3727286693,3583157515,3570423926,3439336513,3421021429,3418089507,3319804122,3302193734,3132487253,3107400720,3065259486,3029142459,2925711154,2750235184,2735338863,2551333624,2522252627,2365912113,2299699731,1873613261,1723904729,1690958753,1594742079,1546679047,1223323770,1069759282,969097043,909452417,845013574,838746372,834326256,826096592,793403366,774173994,723657140,631879649,594453595,563844566,465258246,465082997,439738653,415746457,200722599,127329332,112861665,90701754,0
+array2: .int 4190856685,3912760660,3904053578,3901522990,3857611043,3773578616,3628429965,3561117695,3049122881,2903702377,2763529683,2730920523,2713222782,2660417440,2613829631,2486020141,2349683277,2337949289,2337506386,2314705361,2122650291,2084619859,2067152604,1838754468,1712408862,1695778934,1677958272,1607181932,1603221360,1539704129,1446824402,1423159027,1413554476,1375176493,1300376967,1079534602,906730926,660236645,435954149,410778967,263381541,251621344,162210758,0
+mergedArray: .zero 400

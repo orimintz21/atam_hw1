@@ -1,0 +1,143 @@
+.global _start
+
+.section .text
+    mov $destination, %rax
+    cmpb $210, 0(%rax)
+    jne bad_exit
+
+    cmpb $5, 1(%rax)
+    jne bad_exit
+
+    cmpb $107, 2(%rax)
+    jne bad_exit
+
+    cmpb $200, 3(%rax)
+    jne bad_exit
+
+    cmpb $229, 4(%rax)
+    jne bad_exit
+
+    cmpb $141, 5(%rax)
+    jne bad_exit
+
+    cmpb $95, 6(%rax)
+    jne bad_exit
+
+    cmpb $163, 7(%rax)
+    jne bad_exit
+
+    cmpb $45, 8(%rax)
+    jne bad_exit
+
+    cmpb $44, 9(%rax)
+    jne bad_exit
+
+    cmpb $58, 10(%rax)
+    jne bad_exit
+
+    cmpb $19, 11(%rax)
+    jne bad_exit
+
+    cmpb $128, 12(%rax)
+    jne bad_exit
+
+    cmpb $167, 13(%rax)
+    jne bad_exit
+
+    cmpb $75, 14(%rax)
+    jne bad_exit
+
+    cmpb $35, 15(%rax)
+    jne bad_exit
+
+    cmpb $207, 16(%rax)
+    jne bad_exit
+
+    cmpb $198, 17(%rax)
+    jne bad_exit
+
+    cmpb $203, 18(%rax)
+    jne bad_exit
+
+    cmpb $223, 19(%rax)
+    jne bad_exit
+
+    cmpb $149, 20(%rax)
+    jne bad_exit
+
+    cmpb $59, 21(%rax)
+    jne bad_exit
+
+    cmpb $109, 22(%rax)
+    jne bad_exit
+
+    cmpb $4, 23(%rax)
+    jne bad_exit
+
+    cmpb $84, 24(%rax)
+    jne bad_exit
+
+    cmpb $63, 25(%rax)
+    jne bad_exit
+
+    cmpb $205, 26(%rax)
+    jne bad_exit
+
+    cmpb $230, 27(%rax)
+    jne bad_exit
+
+    cmpb $86, 28(%rax)
+    jne bad_exit
+
+    cmpb $61, 29(%rax)
+    jne bad_exit
+
+    cmpb $48, 30(%rax)
+    jne bad_exit
+
+    cmpb $0, 31(%rax)
+    jne bad_exit
+
+    cmpb $193, 32(%rax)
+    jne bad_exit
+
+    cmpb $8, 33(%rax)
+    jne bad_exit
+
+    cmpb $87, 34(%rax)
+    jne bad_exit
+
+    cmpb $194, 35(%rax)
+    jne bad_exit
+
+    cmpb $37, 36(%rax)
+    jne bad_exit
+
+    cmpb $184, 37(%rax)
+    jne bad_exit
+
+    cmpb $245, 38(%rax)
+    jne bad_exit
+
+    cmpb $125, 39(%rax)
+    jne bad_exit
+
+    cmpb $8, 40(%rax)
+    jne bad_exit
+
+    cmpb $97, 41(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+num: .int 42
+source: .byte 210,5,107,200,229,141,95,163,45,44,58,19,128,167,75,35,207,198,203,223,149,59,109,4,84,63,205,230,86,61,48,0,193,8,87,194,37,184,245,125,8,97,218,246,74,81,22,255,192,41,40,189,166,133,93,18
+destination: .zero 101

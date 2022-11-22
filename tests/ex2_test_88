@@ -1,0 +1,137 @@
+.global _start
+
+.section .text
+    mov $destination, %rax
+    cmpb $11, 0(%rax)
+    jne bad_exit
+
+    cmpb $30, 1(%rax)
+    jne bad_exit
+
+    cmpb $66, 2(%rax)
+    jne bad_exit
+
+    cmpb $248, 3(%rax)
+    jne bad_exit
+
+    cmpb $78, 4(%rax)
+    jne bad_exit
+
+    cmpb $236, 5(%rax)
+    jne bad_exit
+
+    cmpb $34, 6(%rax)
+    jne bad_exit
+
+    cmpb $146, 7(%rax)
+    jne bad_exit
+
+    cmpb $168, 8(%rax)
+    jne bad_exit
+
+    cmpb $40, 9(%rax)
+    jne bad_exit
+
+    cmpb $66, 10(%rax)
+    jne bad_exit
+
+    cmpb $97, 11(%rax)
+    jne bad_exit
+
+    cmpb $105, 12(%rax)
+    jne bad_exit
+
+    cmpb $91, 13(%rax)
+    jne bad_exit
+
+    cmpb $72, 14(%rax)
+    jne bad_exit
+
+    cmpb $166, 15(%rax)
+    jne bad_exit
+
+    cmpb $65, 16(%rax)
+    jne bad_exit
+
+    cmpb $47, 17(%rax)
+    jne bad_exit
+
+    cmpb $48, 18(%rax)
+    jne bad_exit
+
+    cmpb $84, 19(%rax)
+    jne bad_exit
+
+    cmpb $92, 20(%rax)
+    jne bad_exit
+
+    cmpb $221, 21(%rax)
+    jne bad_exit
+
+    cmpb $139, 22(%rax)
+    jne bad_exit
+
+    cmpb $19, 23(%rax)
+    jne bad_exit
+
+    cmpb $249, 24(%rax)
+    jne bad_exit
+
+    cmpb $126, 25(%rax)
+    jne bad_exit
+
+    cmpb $80, 26(%rax)
+    jne bad_exit
+
+    cmpb $152, 27(%rax)
+    jne bad_exit
+
+    cmpb $26, 28(%rax)
+    jne bad_exit
+
+    cmpb $218, 29(%rax)
+    jne bad_exit
+
+    cmpb $169, 30(%rax)
+    jne bad_exit
+
+    cmpb $199, 31(%rax)
+    jne bad_exit
+
+    cmpb $42, 32(%rax)
+    jne bad_exit
+
+    cmpb $224, 33(%rax)
+    jne bad_exit
+
+    cmpb $199, 34(%rax)
+    jne bad_exit
+
+    cmpb $216, 35(%rax)
+    jne bad_exit
+
+    cmpb $174, 36(%rax)
+    jne bad_exit
+
+    cmpb $150, 37(%rax)
+    jne bad_exit
+
+    cmpb $123, 38(%rax)
+    jne bad_exit
+
+    cmpb $253, 39(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+num: .int -40
+source: .byte 253,123,150,174,216,199,224,42,199,169,218,26,152,80,126,249,19,139,221,92,84,48,47,65,166,72,91,105,97,66,40,168,146,34,236,78,248,66,30,11,41,2,143,163,197,235,37
+destination: .zero 58

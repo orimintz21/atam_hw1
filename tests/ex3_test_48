@@ -1,0 +1,104 @@
+.global _start
+
+.section .text
+    mov $mergedArray, %rax
+    cmpl $4220295089, 0(%rax)
+    jne bad_exit
+
+    cmpl $3755832989, 4(%rax)
+    jne bad_exit
+
+    cmpl $3453328632, 8(%rax)
+    jne bad_exit
+
+    cmpl $3433940320, 12(%rax)
+    jne bad_exit
+
+    cmpl $3191589604, 16(%rax)
+    jne bad_exit
+
+    cmpl $3006467396, 20(%rax)
+    jne bad_exit
+
+    cmpl $2909239905, 24(%rax)
+    jne bad_exit
+
+    cmpl $2705997414, 28(%rax)
+    jne bad_exit
+
+    cmpl $2599064564, 32(%rax)
+    jne bad_exit
+
+    cmpl $2508546772, 36(%rax)
+    jne bad_exit
+
+    cmpl $2404250145, 40(%rax)
+    jne bad_exit
+
+    cmpl $2323198071, 44(%rax)
+    jne bad_exit
+
+    cmpl $1954599330, 48(%rax)
+    jne bad_exit
+
+    cmpl $1915019726, 52(%rax)
+    jne bad_exit
+
+    cmpl $1823747920, 56(%rax)
+    jne bad_exit
+
+    cmpl $1758614847, 60(%rax)
+    jne bad_exit
+
+    cmpl $1688422796, 64(%rax)
+    jne bad_exit
+
+    cmpl $1660457658, 68(%rax)
+    jne bad_exit
+
+    cmpl $1574975733, 72(%rax)
+    jne bad_exit
+
+    cmpl $1475996039, 76(%rax)
+    jne bad_exit
+
+    cmpl $986295974, 80(%rax)
+    jne bad_exit
+
+    cmpl $950222140, 84(%rax)
+    jne bad_exit
+
+    cmpl $610290153, 88(%rax)
+    jne bad_exit
+
+    cmpl $575923916, 92(%rax)
+    jne bad_exit
+
+    cmpl $490629138, 96(%rax)
+    jne bad_exit
+
+    cmpl $364894291, 100(%rax)
+    jne bad_exit
+
+    cmpl $287647579, 104(%rax)
+    jne bad_exit
+
+    cmpl $55161729, 108(%rax)
+    jne bad_exit
+
+    cmpl $0, 112(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+array1: .int 3755832989,3191589604,2599064564,2508546772,2404250145,1915019726,1823747920,1688422796,1574975733,1475996039,986295974,610290153,575923916,364894291,55161729,0
+array2: .int 4220295089,3453328632,3433940320,3006467396,2909239905,2705997414,2323198071,1954599330,1758614847,1660457658,950222140,490629138,287647579,0
+mergedArray: .zero 116

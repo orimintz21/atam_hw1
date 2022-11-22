@@ -1,0 +1,308 @@
+.global _start
+
+.section .text
+    mov $destination, %rax
+    cmpb $128, 0(%rax)
+    jne bad_exit
+
+    cmpb $16, 1(%rax)
+    jne bad_exit
+
+    cmpb $130, 2(%rax)
+    jne bad_exit
+
+    cmpb $175, 3(%rax)
+    jne bad_exit
+
+    cmpb $255, 4(%rax)
+    jne bad_exit
+
+    cmpb $212, 5(%rax)
+    jne bad_exit
+
+    cmpb $16, 6(%rax)
+    jne bad_exit
+
+    cmpb $233, 7(%rax)
+    jne bad_exit
+
+    cmpb $76, 8(%rax)
+    jne bad_exit
+
+    cmpb $120, 9(%rax)
+    jne bad_exit
+
+    cmpb $51, 10(%rax)
+    jne bad_exit
+
+    cmpb $197, 11(%rax)
+    jne bad_exit
+
+    cmpb $106, 12(%rax)
+    jne bad_exit
+
+    cmpb $44, 13(%rax)
+    jne bad_exit
+
+    cmpb $100, 14(%rax)
+    jne bad_exit
+
+    cmpb $195, 15(%rax)
+    jne bad_exit
+
+    cmpb $54, 16(%rax)
+    jne bad_exit
+
+    cmpb $89, 17(%rax)
+    jne bad_exit
+
+    cmpb $76, 18(%rax)
+    jne bad_exit
+
+    cmpb $190, 19(%rax)
+    jne bad_exit
+
+    cmpb $115, 20(%rax)
+    jne bad_exit
+
+    cmpb $132, 21(%rax)
+    jne bad_exit
+
+    cmpb $25, 22(%rax)
+    jne bad_exit
+
+    cmpb $117, 23(%rax)
+    jne bad_exit
+
+    cmpb $153, 24(%rax)
+    jne bad_exit
+
+    cmpb $3, 25(%rax)
+    jne bad_exit
+
+    cmpb $254, 26(%rax)
+    jne bad_exit
+
+    cmpb $44, 27(%rax)
+    jne bad_exit
+
+    cmpb $70, 28(%rax)
+    jne bad_exit
+
+    cmpb $35, 29(%rax)
+    jne bad_exit
+
+    cmpb $31, 30(%rax)
+    jne bad_exit
+
+    cmpb $46, 31(%rax)
+    jne bad_exit
+
+    cmpb $112, 32(%rax)
+    jne bad_exit
+
+    cmpb $239, 33(%rax)
+    jne bad_exit
+
+    cmpb $166, 34(%rax)
+    jne bad_exit
+
+    cmpb $196, 35(%rax)
+    jne bad_exit
+
+    cmpb $149, 36(%rax)
+    jne bad_exit
+
+    cmpb $204, 37(%rax)
+    jne bad_exit
+
+    cmpb $113, 38(%rax)
+    jne bad_exit
+
+    cmpb $13, 39(%rax)
+    jne bad_exit
+
+    cmpb $93, 40(%rax)
+    jne bad_exit
+
+    cmpb $21, 41(%rax)
+    jne bad_exit
+
+    cmpb $253, 42(%rax)
+    jne bad_exit
+
+    cmpb $164, 43(%rax)
+    jne bad_exit
+
+    cmpb $222, 44(%rax)
+    jne bad_exit
+
+    cmpb $163, 45(%rax)
+    jne bad_exit
+
+    cmpb $199, 46(%rax)
+    jne bad_exit
+
+    cmpb $225, 47(%rax)
+    jne bad_exit
+
+    cmpb $144, 48(%rax)
+    jne bad_exit
+
+    cmpb $229, 49(%rax)
+    jne bad_exit
+
+    cmpb $110, 50(%rax)
+    jne bad_exit
+
+    cmpb $208, 51(%rax)
+    jne bad_exit
+
+    cmpb $247, 52(%rax)
+    jne bad_exit
+
+    cmpb $171, 53(%rax)
+    jne bad_exit
+
+    cmpb $140, 54(%rax)
+    jne bad_exit
+
+    cmpb $193, 55(%rax)
+    jne bad_exit
+
+    cmpb $77, 56(%rax)
+    jne bad_exit
+
+    cmpb $95, 57(%rax)
+    jne bad_exit
+
+    cmpb $49, 58(%rax)
+    jne bad_exit
+
+    cmpb $132, 59(%rax)
+    jne bad_exit
+
+    cmpb $14, 60(%rax)
+    jne bad_exit
+
+    cmpb $138, 61(%rax)
+    jne bad_exit
+
+    cmpb $236, 62(%rax)
+    jne bad_exit
+
+    cmpb $204, 63(%rax)
+    jne bad_exit
+
+    cmpb $189, 64(%rax)
+    jne bad_exit
+
+    cmpb $90, 65(%rax)
+    jne bad_exit
+
+    cmpb $156, 66(%rax)
+    jne bad_exit
+
+    cmpb $120, 67(%rax)
+    jne bad_exit
+
+    cmpb $76, 68(%rax)
+    jne bad_exit
+
+    cmpb $190, 69(%rax)
+    jne bad_exit
+
+    cmpb $221, 70(%rax)
+    jne bad_exit
+
+    cmpb $116, 71(%rax)
+    jne bad_exit
+
+    cmpb $75, 72(%rax)
+    jne bad_exit
+
+    cmpb $84, 73(%rax)
+    jne bad_exit
+
+    cmpb $176, 74(%rax)
+    jne bad_exit
+
+    cmpb $170, 75(%rax)
+    jne bad_exit
+
+    cmpb $28, 76(%rax)
+    jne bad_exit
+
+    cmpb $84, 77(%rax)
+    jne bad_exit
+
+    cmpb $180, 78(%rax)
+    jne bad_exit
+
+    cmpb $168, 79(%rax)
+    jne bad_exit
+
+    cmpb $39, 80(%rax)
+    jne bad_exit
+
+    cmpb $131, 81(%rax)
+    jne bad_exit
+
+    cmpb $253, 82(%rax)
+    jne bad_exit
+
+    cmpb $88, 83(%rax)
+    jne bad_exit
+
+    cmpb $19, 84(%rax)
+    jne bad_exit
+
+    cmpb $202, 85(%rax)
+    jne bad_exit
+
+    cmpb $147, 86(%rax)
+    jne bad_exit
+
+    cmpb $27, 87(%rax)
+    jne bad_exit
+
+    cmpb $38, 88(%rax)
+    jne bad_exit
+
+    cmpb $6, 89(%rax)
+    jne bad_exit
+
+    cmpb $7, 90(%rax)
+    jne bad_exit
+
+    cmpb $65, 91(%rax)
+    jne bad_exit
+
+    cmpb $54, 92(%rax)
+    jne bad_exit
+
+    cmpb $167, 93(%rax)
+    jne bad_exit
+
+    cmpb $165, 94(%rax)
+    jne bad_exit
+
+    cmpb $116, 95(%rax)
+    jne bad_exit
+
+    cmpb $77, 96(%rax)
+    jne bad_exit
+
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+num: .int -97
+source: .byte 77,116,165,167,54,65,7,6,38,27,147,202,19,88,253,131,39,168,180,84,28,170,176,84,75,116,221,190,76,120,156,90,189,204,236,138,14,132,49,95,77,193,140,171,247,208,110,229,144,225,199,163,222,164,253,21,93,13,113,204,149,196,166,239,112,46,31,35,70,44,254,3,153,117,25,132,115,190,76,89,54,195,100,44,106,197,51,120,76,233,16,212,255,175,130,16,128,73,245,25
+destination: .zero 101

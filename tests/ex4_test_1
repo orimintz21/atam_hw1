@@ -1,0 +1,29 @@
+.global _start
+
+.section .text
+    movq $root, %rax
+    cmpq $new_node, (%rax)
+    jne bad_exit
+
+    movq $new_node, %rax
+    cmpq $11, (%rax)
+    jne bad_exit
+    cmpq $0, 8(%rax)
+    jne bad_exit
+    cmpq $0, 16(%rax)
+    jne bad_exit
+	
+    movq $60, %rax
+    movq $0, %rdi
+    syscall
+
+bad_exit:
+    movq $60, %rax
+    movq $1, %rdi
+    syscall
+
+.section .data
+root:
+  .quad 0
+
+new_node: .quad 11, 0, 0
