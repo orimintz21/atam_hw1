@@ -15,7 +15,7 @@ _while_arrs_HW1:
 	je _while_arr_i_not_finished_HW1
 	movl (%rax), %edi
 	cmpl %edi, (%rdx)
-	jl _cond_arr1_to_merged_HW1
+	jb _cond_arr1_to_merged_HW1
 	movl (%rdx), %edi
 	addq $4, %rdx
 _check_first_iter_HW1:
