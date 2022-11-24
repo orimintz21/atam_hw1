@@ -4,6 +4,7 @@
 _start:
     movq head, %rax
     movl val, %ebx
+    movslq %ebx, %rbx
     movb $0, %cl
     xorq %rdx, %rdx
 _loop_HW1:

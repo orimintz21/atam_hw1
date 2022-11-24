@@ -12,7 +12,7 @@ run:
 
 ```
 sudo apt-get install dos2unix
-dox2unix run_all_tests.sh
+dos2unix run_all_tests.sh
 ```
 
 ### "Permission denied" Error:
@@ -20,4 +20,5 @@ dox2unix run_all_tests.sh
 run:
 ```
 chmod 777 run_all_tests.sh
+chmod 777 run_test.sh
 ```

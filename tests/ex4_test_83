@@ -2,99 +2,19 @@
 
 .section .text
     mov $root, %rax
-    cmpq $node4, (%rax)
+    cmpq $node_1, (%rax)
     jne bad_exit
 
-    movq $node4, %rax
-    cmpq $4, (%rax)
-    jne bad_exit
-    cmpq $node1, 8(%rax)
-    jne bad_exit
-    cmpq $node12, 16(%rax)
-    jne bad_exit
-
-    movq $node1, %rax
+    movq $node_1, %rax
     cmpq $1, (%rax)
     jne bad_exit
-    cmpq $node0, 8(%rax)
+    cmpq $node_0, 8(%rax)
     jne bad_exit
-    cmpq $node3, 16(%rax)
-    jne bad_exit
-
-    movq $node12, %rax
-    cmpq $12, (%rax)
-    jne bad_exit
-    cmpq $node8, 8(%rax)
-    jne bad_exit
-    cmpq $node13, 16(%rax)
+    cmpq $0, 16(%rax)
     jne bad_exit
 
-    movq $node0, %rax
+    movq $node_0, %rax
     cmpq $0, (%rax)
-    jne bad_exit
-    cmpq $0, 8(%rax)
-    jne bad_exit
-    cmpq $0, 16(%rax)
-    jne bad_exit
-
-    movq $node3, %rax
-    cmpq $3, (%rax)
-    jne bad_exit
-    cmpq $node2, 8(%rax)
-    jne bad_exit
-    cmpq $0, 16(%rax)
-    jne bad_exit
-
-    movq $node8, %rax
-    cmpq $8, (%rax)
-    jne bad_exit
-    cmpq $node5, 8(%rax)
-    jne bad_exit
-    cmpq $node9, 16(%rax)
-    jne bad_exit
-
-    movq $node13, %rax
-    cmpq $13, (%rax)
-    jne bad_exit
-    cmpq $0, 8(%rax)
-    jne bad_exit
-    cmpq $node14, 16(%rax)
-    jne bad_exit
-
-    movq $node2, %rax
-    cmpq $2, (%rax)
-    jne bad_exit
-    cmpq $0, 8(%rax)
-    jne bad_exit
-    cmpq $0, 16(%rax)
-    jne bad_exit
-
-    movq $node5, %rax
-    cmpq $5, (%rax)
-    jne bad_exit
-    cmpq $0, 8(%rax)
-    jne bad_exit
-    cmpq $0, 16(%rax)
-    jne bad_exit
-
-    movq $node9, %rax
-    cmpq $9, (%rax)
-    jne bad_exit
-    cmpq $0, 8(%rax)
-    jne bad_exit
-    cmpq $0, 16(%rax)
-    jne bad_exit
-
-    movq $node14, %rax
-    cmpq $14, (%rax)
-    jne bad_exit
-    cmpq $0, 8(%rax)
-    jne bad_exit
-    cmpq $new_node, 16(%rax)
-    jne bad_exit
-
-    movq $new_node, %rax
-    cmpq $19, (%rax)
     jne bad_exit
     cmpq $0, 8(%rax)
     jne bad_exit
@@ -111,50 +31,13 @@ bad_exit:
     syscall
 
 .section .data
-root:
-  .quad node4
-node4:
-  .quad 4
-  .quad node1
-  .quad node12
-node1:
+root: .quad node_1
+node_1:
   .quad 1
-  .quad node0
-  .quad node3
-node12:
-  .quad 12
-  .quad node8
-  .quad node13
-node0:
+  .quad node_0
+  .quad 0
+node_0:
   .quad 0
   .quad 0
   .quad 0
-node3:
-  .quad 3
-  .quad node2
-  .quad 0
-node8:
-  .quad 8
-  .quad node5
-  .quad node9
-node13:
-  .quad 13
-  .quad 0
-  .quad node14
-node2:
-  .quad 2
-  .quad 0
-  .quad 0
-node5:
-  .quad 5
-  .quad 0
-  .quad 0
-node9:
-  .quad 9
-  .quad 0
-  .quad 0
-node14:
-  .quad 14
-  .quad 0
-  .quad 0
-new_node: .quad 19, 0, 0
+new_node: .quad 1, 0, 0
