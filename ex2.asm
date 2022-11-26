@@ -1,5 +1,10 @@
 .global _start
 
+# rax = ptr to source
+# rbx = ptr to destination
+# ecx = num
+# r9 = rbx - rax = source - destination
+
 .section .text
 _start:
     movq $source, %rax
@@ -11,7 +16,7 @@ _start:
     movq %rbx, %r9
     subq %rax, %r9
     cmpq $0, %r9
-    jg _pos_loop_HW1
+    js _pos_loop_HW1
     movslq %ecx , %r10
     cmpq %r10, %r9
     js _overlap_HW1
@@ -35,6 +40,8 @@ _overlap_loop_HW1:
     loop _overlap_loop_HW1
     jmp _end_HW1
 _num_negative_HW1:
+
+
     negl %ecx
     addq %rcx, %rax
     decq %rax

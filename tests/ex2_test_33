@@ -2,115 +2,37 @@
 
 .section .text
     mov $destination, %rax
-    cmpb $44, 0(%rax)
+    cmpb $201, 0(%rax)
     jne bad_exit
 
-    cmpb $154, 1(%rax)
+    cmpb $186, 1(%rax)
     jne bad_exit
 
-    cmpb $148, 2(%rax)
+    cmpb $156, 2(%rax)
     jne bad_exit
 
-    cmpb $58, 3(%rax)
+    cmpb $224, 3(%rax)
     jne bad_exit
 
-    cmpb $56, 4(%rax)
+    cmpb $153, 4(%rax)
     jne bad_exit
 
-    cmpb $52, 5(%rax)
+    cmpb $251, 5(%rax)
     jne bad_exit
 
-    cmpb $89, 6(%rax)
+    cmpb $177, 6(%rax)
     jne bad_exit
 
-    cmpb $134, 7(%rax)
+    cmpb $234, 7(%rax)
     jne bad_exit
 
-    cmpb $198, 8(%rax)
+    cmpb $189, 8(%rax)
     jne bad_exit
 
-    cmpb $31, 9(%rax)
+    cmpb $186, 9(%rax)
     jne bad_exit
 
-    cmpb $222, 10(%rax)
-    jne bad_exit
-
-    cmpb $204, 11(%rax)
-    jne bad_exit
-
-    cmpb $246, 12(%rax)
-    jne bad_exit
-
-    cmpb $13, 13(%rax)
-    jne bad_exit
-
-    cmpb $98, 14(%rax)
-    jne bad_exit
-
-    cmpb $52, 15(%rax)
-    jne bad_exit
-
-    cmpb $17, 16(%rax)
-    jne bad_exit
-
-    cmpb $162, 17(%rax)
-    jne bad_exit
-
-    cmpb $0, 18(%rax)
-    jne bad_exit
-
-    cmpb $233, 19(%rax)
-    jne bad_exit
-
-    cmpb $221, 20(%rax)
-    jne bad_exit
-
-    cmpb $8, 21(%rax)
-    jne bad_exit
-
-    cmpb $57, 22(%rax)
-    jne bad_exit
-
-    cmpb $184, 23(%rax)
-    jne bad_exit
-
-    cmpb $193, 24(%rax)
-    jne bad_exit
-
-    cmpb $215, 25(%rax)
-    jne bad_exit
-
-    cmpb $239, 26(%rax)
-    jne bad_exit
-
-    cmpb $172, 27(%rax)
-    jne bad_exit
-
-    cmpb $180, 28(%rax)
-    jne bad_exit
-
-    cmpb $226, 29(%rax)
-    jne bad_exit
-
-    cmpb $67, 30(%rax)
-    jne bad_exit
-
-    cmpb $107, 31(%rax)
-    jne bad_exit
-
-    cmpb $131, 32(%rax)
-    jne bad_exit
-
-    cmpb $196, 33(%rax)
-    jne bad_exit
-
-    cmpb $77, 34(%rax)
-    jne bad_exit
-
-    cmpb $204, 35(%rax)
-    jne bad_exit
-
-    cmpb $203, 36(%rax)
+    cmpb $201, 10(%rax)
     jne bad_exit
 
     movq $60, %rax
@@ -123,6 +45,6 @@ bad_exit:
     syscall
 
 .section .data
-num: .int 37
-source: .byte 44,154,148,58,56,52,89,134,198,31,222,204,246,13,98,52,17,162,0,233,221,8,57,184,193,215,239,172,180,226,67,107,131,196,77,204,203,206,170,212,68,254,63
-destination: .zero 99
+num: .int -9
+destination: .byte 44,183
+source: .byte 189,234,177,251,153,224,156,186,201

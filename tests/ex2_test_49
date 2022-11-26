@@ -2,133 +2,13 @@
 
 .section .text
     mov $destination, %rax
-    cmpb $6, 0(%rax)
+    cmpb $121, 0(%rax)
     jne bad_exit
 
-    cmpb $236, 1(%rax)
+    cmpb $249, 1(%rax)
     jne bad_exit
 
-    cmpb $239, 2(%rax)
-    jne bad_exit
-
-    cmpb $212, 3(%rax)
-    jne bad_exit
-
-    cmpb $122, 4(%rax)
-    jne bad_exit
-
-    cmpb $246, 5(%rax)
-    jne bad_exit
-
-    cmpb $18, 6(%rax)
-    jne bad_exit
-
-    cmpb $32, 7(%rax)
-    jne bad_exit
-
-    cmpb $10, 8(%rax)
-    jne bad_exit
-
-    cmpb $174, 9(%rax)
-    jne bad_exit
-
-    cmpb $236, 10(%rax)
-    jne bad_exit
-
-    cmpb $250, 11(%rax)
-    jne bad_exit
-
-    cmpb $61, 12(%rax)
-    jne bad_exit
-
-    cmpb $189, 13(%rax)
-    jne bad_exit
-
-    cmpb $67, 14(%rax)
-    jne bad_exit
-
-    cmpb $77, 15(%rax)
-    jne bad_exit
-
-    cmpb $4, 16(%rax)
-    jne bad_exit
-
-    cmpb $227, 17(%rax)
-    jne bad_exit
-
-    cmpb $63, 18(%rax)
-    jne bad_exit
-
-    cmpb $46, 19(%rax)
-    jne bad_exit
-
-    cmpb $216, 20(%rax)
-    jne bad_exit
-
-    cmpb $20, 21(%rax)
-    jne bad_exit
-
-    cmpb $83, 22(%rax)
-    jne bad_exit
-
-    cmpb $69, 23(%rax)
-    jne bad_exit
-
-    cmpb $98, 24(%rax)
-    jne bad_exit
-
-    cmpb $251, 25(%rax)
-    jne bad_exit
-
-    cmpb $183, 26(%rax)
-    jne bad_exit
-
-    cmpb $162, 27(%rax)
-    jne bad_exit
-
-    cmpb $139, 28(%rax)
-    jne bad_exit
-
-    cmpb $158, 29(%rax)
-    jne bad_exit
-
-    cmpb $71, 30(%rax)
-    jne bad_exit
-
-    cmpb $59, 31(%rax)
-    jne bad_exit
-
-    cmpb $86, 32(%rax)
-    jne bad_exit
-
-    cmpb $219, 33(%rax)
-    jne bad_exit
-
-    cmpb $197, 34(%rax)
-    jne bad_exit
-
-    cmpb $163, 35(%rax)
-    jne bad_exit
-
-    cmpb $247, 36(%rax)
-    jne bad_exit
-
-    cmpb $224, 37(%rax)
-    jne bad_exit
-
-    cmpb $112, 38(%rax)
-    jne bad_exit
-
-    cmpb $79, 39(%rax)
-    jne bad_exit
-
-    cmpb $123, 40(%rax)
-    jne bad_exit
-
-    cmpb $207, 41(%rax)
-    jne bad_exit
-
-    cmpb $34, 42(%rax)
+    cmpb $249, 2(%rax)
     jne bad_exit
 
     movq $60, %rax
@@ -141,6 +21,6 @@ bad_exit:
     syscall
 
 .section .data
-num: .int -43
-source: .byte 34,207,123,79,112,224,247,163,197,219,86,59,71,158,139,162,183,251,98,69,83,20,216,46,63,227,4,77,67,189,61,250,236,174,10,32,18,246,122,212,239,236,6,221,209,14,141,118,8,179,101,43,23,217,8,118,78,40,212,110,4,35,79,176,193,155,201,167,92,205,105,195,29,145,85,61,199,16,251,172,45,17,141,73,146,152,92
-destination: .zero 97
+num: .int 2
+destination: .byte 24
+source: .byte 121,249

@@ -2,97 +2,19 @@
 
 .section .text
     mov $destination, %rax
-    cmpb $161, 0(%rax)
+    cmpb $103, 0(%rax)
     jne bad_exit
 
-    cmpb $172, 1(%rax)
+    cmpb $139, 1(%rax)
     jne bad_exit
 
-    cmpb $113, 2(%rax)
+    cmpb $76, 2(%rax)
     jne bad_exit
 
-    cmpb $229, 3(%rax)
+    cmpb $55, 3(%rax)
     jne bad_exit
 
-    cmpb $186, 4(%rax)
-    jne bad_exit
-
-    cmpb $17, 5(%rax)
-    jne bad_exit
-
-    cmpb $92, 6(%rax)
-    jne bad_exit
-
-    cmpb $126, 7(%rax)
-    jne bad_exit
-
-    cmpb $156, 8(%rax)
-    jne bad_exit
-
-    cmpb $130, 9(%rax)
-    jne bad_exit
-
-    cmpb $1, 10(%rax)
-    jne bad_exit
-
-    cmpb $140, 11(%rax)
-    jne bad_exit
-
-    cmpb $172, 12(%rax)
-    jne bad_exit
-
-    cmpb $151, 13(%rax)
-    jne bad_exit
-
-    cmpb $98, 14(%rax)
-    jne bad_exit
-
-    cmpb $199, 15(%rax)
-    jne bad_exit
-
-    cmpb $205, 16(%rax)
-    jne bad_exit
-
-    cmpb $184, 17(%rax)
-    jne bad_exit
-
-    cmpb $252, 18(%rax)
-    jne bad_exit
-
-    cmpb $155, 19(%rax)
-    jne bad_exit
-
-    cmpb $45, 20(%rax)
-    jne bad_exit
-
-    cmpb $133, 21(%rax)
-    jne bad_exit
-
-    cmpb $121, 22(%rax)
-    jne bad_exit
-
-    cmpb $202, 23(%rax)
-    jne bad_exit
-
-    cmpb $132, 24(%rax)
-    jne bad_exit
-
-    cmpb $250, 25(%rax)
-    jne bad_exit
-
-    cmpb $73, 26(%rax)
-    jne bad_exit
-
-    cmpb $2, 27(%rax)
-    jne bad_exit
-
-    cmpb $146, 28(%rax)
-    jne bad_exit
-
-    cmpb $153, 29(%rax)
-    jne bad_exit
-
-    cmpb $228, 30(%rax)
+    cmpb $199, 4(%rax)
     jne bad_exit
 
     movq $60, %rax
@@ -105,6 +27,6 @@ bad_exit:
     syscall
 
 .section .data
-num: .int 31
-source: .byte 161,172,113,229,186,17,92,126,156,130,1,140,172,151,98,199,205,184,252,155,45,133,121,202,132,250,73,2,146,153,228,155,124,26,230,137,154,128,140,103,163,87,173,37,229,236,12,111,236,26,171,221,244,67,169,44,127,146,216,119,26,168,27,136,247,177,222,138,253,47,95,239,77,16,12,62,246,50,36,220,251,101,160,12,15,138,66,66
-destination: .zero 94
+num: .int 2
+destination: .byte 
+source: .byte 103,139,76,55,199

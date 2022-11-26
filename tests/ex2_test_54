@@ -2,76 +2,34 @@
 
 .section .text
     mov $destination, %rax
-    cmpb $234, 0(%rax)
+    cmpb $62, 0(%rax)
     jne bad_exit
 
-    cmpb $210, 1(%rax)
+    cmpb $241, 1(%rax)
     jne bad_exit
 
-    cmpb $22, 2(%rax)
+    cmpb $131, 2(%rax)
     jne bad_exit
 
-    cmpb $248, 3(%rax)
+    cmpb $146, 3(%rax)
     jne bad_exit
 
-    cmpb $33, 4(%rax)
+    cmpb $131, 4(%rax)
     jne bad_exit
 
-    cmpb $41, 5(%rax)
+    cmpb $146, 5(%rax)
     jne bad_exit
 
-    cmpb $197, 6(%rax)
+    cmpb $102, 6(%rax)
     jne bad_exit
 
-    cmpb $11, 7(%rax)
+    cmpb $12, 7(%rax)
     jne bad_exit
 
-    cmpb $140, 8(%rax)
+    cmpb $237, 8(%rax)
     jne bad_exit
 
-    cmpb $88, 9(%rax)
-    jne bad_exit
-
-    cmpb $56, 10(%rax)
-    jne bad_exit
-
-    cmpb $179, 11(%rax)
-    jne bad_exit
-
-    cmpb $154, 12(%rax)
-    jne bad_exit
-
-    cmpb $205, 13(%rax)
-    jne bad_exit
-
-    cmpb $179, 14(%rax)
-    jne bad_exit
-
-    cmpb $241, 15(%rax)
-    jne bad_exit
-
-    cmpb $146, 16(%rax)
-    jne bad_exit
-
-    cmpb $121, 17(%rax)
-    jne bad_exit
-
-    cmpb $63, 18(%rax)
-    jne bad_exit
-
-    cmpb $99, 19(%rax)
-    jne bad_exit
-
-    cmpb $213, 20(%rax)
-    jne bad_exit
-
-    cmpb $196, 21(%rax)
-    jne bad_exit
-
-    cmpb $111, 22(%rax)
-    jne bad_exit
-
-    cmpb $84, 23(%rax)
+    cmpb $218, 9(%rax)
     jne bad_exit
 
     movq $60, %rax
@@ -84,6 +42,6 @@ bad_exit:
     syscall
 
 .section .data
-num: .int -24
-source: .byte 84,111,196,213,99,63,121,146,241,179,205,154,179,56,88,140,11,197,41,33,248,22,210,234,175,119,239,94,129,85,23,8,108,183,182,90,108,199,195,58,7,125,9,129,42,49,27,96,146,220,177,27
-destination: .zero 92
+num: .int 4
+destination: .byte 9,210
+source: .byte 62,241,131,146,102,12,237,218

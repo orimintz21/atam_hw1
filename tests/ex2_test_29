@@ -1,32 +1,59 @@
 .global _start
 
 .section .text
-    mov $destination, %rax
-    cmpb $251, 0(%rax)
+    mov $source, %rax
+    cmpb $32, 0(%rax)
     jne bad_exit
 
-    cmpb $175, 1(%rax)
+    cmpb $143, 1(%rax)
     jne bad_exit
 
-    cmpb $48, 2(%rax)
+    cmpb $198, 2(%rax)
     jne bad_exit
 
-    cmpb $156, 3(%rax)
+    cmpb $101, 3(%rax)
     jne bad_exit
 
-    cmpb $219, 4(%rax)
+    cmpb $241, 4(%rax)
     jne bad_exit
 
-    cmpb $141, 5(%rax)
+    cmpb $116, 5(%rax)
     jne bad_exit
 
-    cmpb $166, 6(%rax)
+    cmpb $217, 6(%rax)
     jne bad_exit
 
-    cmpb $12, 7(%rax)
+    cmpb $58, 7(%rax)
     jne bad_exit
 
-    cmpb $192, 8(%rax)
+    cmpb $203, 8(%rax)
+    jne bad_exit
+
+    cmpb $32, 9(%rax)
+    jne bad_exit
+
+    cmpb $143, 10(%rax)
+    jne bad_exit
+
+    cmpb $198, 11(%rax)
+    jne bad_exit
+
+    cmpb $101, 12(%rax)
+    jne bad_exit
+
+    cmpb $241, 13(%rax)
+    jne bad_exit
+
+    cmpb $116, 14(%rax)
+    jne bad_exit
+
+    cmpb $217, 15(%rax)
+    jne bad_exit
+
+    cmpb $33, 16(%rax)
+    jne bad_exit
+
+    cmpb $153, 17(%rax)
     jne bad_exit
 
     movq $60, %rax
@@ -39,6 +66,6 @@ bad_exit:
     syscall
 
 .section .data
-num: .int -9
-source: .byte 192,12,166,141,219,156,48,175,251,61,39,5,23,31,171,44,119,140,25,32,72,78,165,123,23,251,101,56,252,27,56,9,0,217,41,85,240,179,125,165,51,14,129,86,187,56,60,133,82,20,202,2,213,141,76,253,219,92
-destination: .zero 66
+num: .int 7
+source: .byte 32,143,198,101,241,116,217,58,203
+destination: .byte 110,9,234,13,93,72,150,33,153
